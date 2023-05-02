@@ -5,9 +5,8 @@ import hashlib
 
 
 def load_key():
-    file = open("key.key", "rb")
-    key = file.read()
-    file.close()
+    with open("key.key", "rb") as file:
+        key = file.read()
     return key
 
 
